@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" type = "image/png" href ="images/OS.png">
+    <title>Pseudo Clone</title>
+
+    <script src = "Scripts/myScript.js"></script>
+    <script>
+        function Function() {
+            document.getElementById("demo").innerText = 'I will overthrow Chatgpt and Deepseek';
+        }
+    </script>
+</head>
+<body>
+    <!--leave scripts at the bottom because it slows down display-->
+
+    <h1>Welcome to Javascript!</h1>
+    <button type = "button"  onclick = "document.getElementById('time').innerHTML = Date();">Display Date</button>
+    <button type = "button" onclick = "document.getElementById('time').style.fontSize='35px'">Change font size</button>
+    <button type = "button" onclick = "document.getElementById('time').style.display='none'">Hide Text</button>
+    <button type = "button" onclick = "document.getElementById('time').style.display='block'">Reveal Text</button>
+    <button type = "button" onclick = "Function()">Continue monologue</button>
+    <button type = "button" onclick = "alert('You clicked on a button')">Alert</button>
+    <button type = "button" onclick = "window.print()">Print</button>
+     
+    <p id = "time">Hello World</p>
+    <p id = "demo">I have awakened.</p>
+    <p>but you may be interested to know</p>
+    <p id = "math"></p>
+    <p id = "list"></p>
+    <p id = "error"></p>
+    <p id = "square"></p>
+
+    <script>
+        let x, y, z;
+        x = 5;
+        y = 6;
+        z = x + y;
+        myFunction();
+        document.write(5 + 6 + " does not = " + 6 + 5);
+        window.alert("Ladies and Gentlemen! Welcome to my Javascript!")
+        console.log();
+        document.getElementById("math").innerHTML = "The value of z is the " + typeof 1 + " " + z + ".";
+    </script>
+    <script>
+        const myList = [5,1,2,3,4,5,];
+        const myObject = {type:"square", 
+                          color:"white", 
+                          number:8,
+                          description: function() {
+                            return this.color + " " + this.type;
+                          }
+                        };
+        myObject.number = 7;
+        myObject.myFunction = function() {
+            return "number " + this.number;
+        };
+        myObject.UpperCase = function() {
+            return (myObject.color + " " + myObject.type).toUpperCase();
+        };
+
+        myList[0] = 0;
+        myList.push(6);
+        document.getElementById("list").innerHTML = myList + "," + myObject.number;
+        document.getElementById("square").innerHTML = "I have an object. It's a " + myObject.description()
+                                                      + ". Do you hear me? I have a " + myObject.UpperCase() + "!!!";
+
+        try {
+            alert(u);
+            const u = ["substitution"];
+            u = ["chain rule"];
+        }
+        catch (err) {
+            document.getElementById("error").innerHTML = err;
+        }
+    </script><br>  
+    <!--using document.write after the page is loaded will delete all previous HTML-->
+
+    <!--basically like a canvas, no px
+        the circle part is positioned from the center-->
+    <svg width = "500" height = "500">
+        <circle cx = "200" cy = "200" stroke = "black" 
+                r = "100" stroke-width = "2" fill ="orange"/>
+    </svg>
+    <svg width = "500" height = "500">
+        <rect x = "10" y = "100" width = "200" height = "200" 
+              stroke = "red" stroke-width = "5" fill = "lightgreen"/>
+    </svg><br>
+
+    <!--
+    <svg width = "500" height = "500">
+        <circle cx = "200" cy = "200" stroke = "black" 
+                r = "100" stroke-width = "2" fill ="orange"/>
+    </svg>
+    <svg width = "500" height = "500">
+        <rect x = "100" y = "100" rx = "50" ry = "90" width = "150" height = "250"
+              style = "fill:red;stroke:coral;stroke-width:5;opacity:0.5;"/>
+    </svg>
+    <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+
+    </svg>
+    <svg height="130" width="500">
+    <defs>
+        <linearGradient id="grad1">
+        <stop offset="0%" stop-color="yellow" />
+        <stop offset="100%" stop-color="red" />
+        </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+    Sorry, your browser does not support inline SVG.
+    </svg>
+    
+-->
+
+</body>
+</html>
